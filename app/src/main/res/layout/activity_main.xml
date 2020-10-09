@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/main_top_logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/urban" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/main_exoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bottom_bar"
+        android:layout_below="@+id/main_top_logo"
+        app:controller_layout_id="@layout/exo_controller_layout" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Dark"
+        app:itemIconTint="@drawable/bottom_ripple"
+        app:itemTextColor="@drawable/bottom_ripple"
+        app:labelVisibilityMode="labeled"
+        app:itemIconSize="20dp"
+        app:menu="@menu/bottom_menu" />
+
+    <ProgressBar
+        android:id="@+id/main_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

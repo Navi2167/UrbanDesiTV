@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/dash_top_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:src="@drawable/urban" />
+
+        <ImageView
+            android:id="@+id/dash_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_arrow" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/dash_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/dash_bottom_bar"
+        android:layout_below="@+id/dash_top_logo" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/dash_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/Dark"
+        app:itemIconTint="@drawable/bottom_ripple"
+        app:itemTextColor="@drawable/bottom_ripple"
+        app:labelVisibilityMode="labeled"
+        app:itemIconSize="20dp"
+        app:menu="@menu/bottom_menu" />
+</RelativeLayout>

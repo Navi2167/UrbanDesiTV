@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="flag"
+            type="boolean" />
+
+        <variable
+            name="url"
+            type="String" />
+
+        <variable
+            name="data"
+            type="com.ardigitalsolutions.urbandesitv.service.allModels.news.NewsModel" />
+
+        <variable
+            name="click"
+            type="com.ardigitalsolutions.urbandesitv.view.allAdapters.NewsAdapter.ClickEvent" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                loadImage="@{url}"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <TextView
+                    newsTitle="@{data.title.rendered}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:ems="2"
+                    android:lines="2"
+                    android:paddingEnd="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:onClick="@{()->click.onclick(data.content.rendered,data.title.rendered)}"
+                    android:paddingVertical="10dp"
+                    android:text="Read more"
+                    android:textColor="@color/Dark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

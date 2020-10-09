@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "530802435442",
+    "firebase_url": "https://urbandesitv.firebaseio.com",
+    "project_id": "urbandesitv",
+    "storage_bucket": "urbandesitv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530802435442:android:c9df9a69204c394ba169eb",
+        "android_client_info": {
+          "package_name": "com.ardigitalsolutions.urbandesitv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530802435442-cc92evu1abhol1rqg3ev9jko15ec3hgj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ardigitalsolutions.urbandesitv",
+            "certificate_hash": "97a21f37c276048898867ee7a3aaf2e670012451"
+          }
+        },
+        {
+          "client_id": "530802435442-hr2n00rmsntd0ql3o6h3vllqf687gaud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYDzAGa7vUCyb2Dms0j1B1wJL4adLBWhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530802435442-hr2n00rmsntd0ql3o6h3vllqf687gaud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
